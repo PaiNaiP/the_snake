@@ -61,7 +61,6 @@ class Apple(GameObject):
 
     def __init__(self):
         """Инициализирует яблоко."""
-        super().__init__()
         self.body_color = APPLE_COLOR
         self.randomize_position()
 
@@ -165,16 +164,16 @@ def handle_keys(game_object):
                 pygame.quit()
                 raise SystemExit
             elif (event.key == pygame.K_UP
-                  and game_object.direction != 'DOWN'):
+                    and game_object.direction != 'DOWN'):
                 game_object.next_direction = 'UP'
             elif (event.key == pygame.K_DOWN
-                  and game_object.direction != 'UP'):
+                    and game_object.direction != 'UP'):
                 game_object.next_direction = 'DOWN'
             elif (event.key == pygame.K_LEFT
-                  and game_object.direction != 'RIGHT'):
+                    and game_object.direction != 'RIGHT'):
                 game_object.next_direction = 'LEFT'
             elif (event.key == pygame.K_RIGHT
-                  and game_object.direction != 'LEFT'):
+                    and game_object.direction != 'LEFT'):
                 game_object.next_direction = 'RIGHT'
 
 def main():
